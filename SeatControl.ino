@@ -29,6 +29,9 @@ int HeatBackPin = 1;
 int ThermistorPinBack = 3; 
 int ThermistorPinBottom = 4; 
 
+//Interrupt Pin
+ButtonInterrupt = 5
+
 //Operational Vars
 
 //Core flags/vars
@@ -118,7 +121,7 @@ void setup() {
   //On the Arduino R4, the interrupt is not working.... Worked on the R3.
   //Enable the lines below on a board where it works.
   //pinMode(ButtonInterrupt, INPUT);
-  //attachInterrupt(digitalPinToInterrupt(ButtonInterrupt), InterruptButtonPoller, FALLING);
+  //attachInterrupt(ButtonInterrupt, InterruptButtonPoller, FALLING);
 
   //Ensure relays are off (yes, with this relay board HIGH is off)
   digitalWrite(HeatBottomRelay,HIGH);
